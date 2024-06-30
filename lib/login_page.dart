@@ -56,13 +56,13 @@ class _LoginPageState extends State<LoginPage> {
                             // border: Border.all(color: Colors.black),
                           ),
                           // alignment: MainAxisAlignment.center,
-                          height: 550,
+                          height: 450,
                           width: 500,
                         ),
                       ),
                       Column(
                         //  verticalDirection :VerticalDirection.down,
-                        children: [
+                        children: <Widget>[
                           const Row(
                             children: [
                               Padding(padding: EdgeInsets.all(20.0)),
@@ -112,29 +112,14 @@ class _LoginPageState extends State<LoginPage> {
                               hinText: '123xxx',
                               obscureText: true,
                               label: 'Password'),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                const Text("Don't have any account? "),
-                                GestureDetector(
-                                    child: const Text(
-                                      'register',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.blueAccent),
-                                    ),
-                                    onTap: () {
-                                      print('tapped');
-                                    })
-                              ],
-                            ),
-                          ),
+                          const Padding(padding: EdgeInsets.all(8.0)),
+
+
                           Stack(
                             children: [
                               Container(
                                 width: 500,
-                                height: 50,
+                                height: 60,
                                 decoration: BoxDecoration(
                                     color: const Color.fromARGB(255, 254, 133, 79),
                                   borderRadius: BorderRadius.circular(15),
@@ -142,31 +127,34 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
 
                               ),
-                              Center(
-                                child: Container(
-                                  width: 100,
-                                  height: 50,
-                                   decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 254, 133, 79),
-                                    borderRadius: BorderRadius.circular(15),
-                                    // border: Border.all(color: Colors.black),
-                                  ),
-                                  child: MaterialButton(
-                                    minWidth: 4,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30),
-                                      side:
-                                          const BorderSide(color: Color.fromARGB(255, 244, 243, 243),
-                                          width: 3,
-                                          ),
-                                    ),                                    onPressed: () {},
-                                    child: const Center(
-                                      child: Text(
-                                        "Login",
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color.fromARGB(179, 16, 2, 2)),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Container(
+                                    width: 100,
+                                    height: 40,
+                                     decoration: BoxDecoration(
+                                      color: const Color.fromARGB(255, 254, 133, 79),
+                                      borderRadius: BorderRadius.circular(15),
+                                      // border: Border.all(color: Colors.black),
+                                    ),
+                                    child: MaterialButton(
+                                      minWidth: 4,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(30),
+                                        side:
+                                            const BorderSide(color: Color.fromARGB(255, 244, 243, 243),
+                                            width: 3,
+                                            ),
+                                      ),                                    onPressed: () {},
+                                      child: const Center(
+                                        child: Text(
+                                          "Login",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color.fromARGB(179, 16, 2, 2)),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -179,6 +167,26 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
+                   Center(
+                     child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          const Text("Don't have any account? "),
+                          GestureDetector(
+                              child: const Text(
+                                'register',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 215, 111, 32)),
+                              ),
+                              onTap: () {
+                                print('tapped');
+                              })
+                        ],
+                      ),
+                                       ),
+                   ),
                 ],
               ),
               const Padding(
@@ -189,9 +197,6 @@ class _LoginPageState extends State<LoginPage> {
                     image: AssetImage('assets/cat.png'),
                     height: 150,
                     fit: BoxFit.fill,
-                    // Icons.lock_clock,
-                    // size: 100,
-                    // color: Color.fromARGB(255, 10, 211, 211),
                   ),
                 ),
               ),
