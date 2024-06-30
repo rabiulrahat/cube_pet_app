@@ -29,7 +29,7 @@ class PetTextfield extends StatelessWidget {
           label:Text(label),
           hintText: hinText,
           hintStyle: const TextStyle(
-              fontSize: 14, fontWeight: FontWeight.bold, color: Colors.red),
+              fontSize: 14, fontWeight: FontWeight.bold, color:   Color.fromARGB(255, 191, 89, 43)),
           // hintStyle: tex,\
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),

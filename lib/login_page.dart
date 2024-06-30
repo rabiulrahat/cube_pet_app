@@ -130,36 +130,47 @@ class _LoginPageState extends State<LoginPage> {
                               ],
                             ),
                           ),
-                          Container(
-                            width: 500,
-                            height: 50,
-                             decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 254, 133, 79),
-                              borderRadius: BorderRadius.circular(15),
-                              // border: Border.all(color: Colors.black),
-                            ),
-                            child: Container(
-                              // width: 20,
-                               decoration: BoxDecoration(
-                                color:
-                                    const Color.fromARGB(255, 254, 133, 79),
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(color: Colors.black),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 500,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(255, 254, 133, 79),
+                                  borderRadius: BorderRadius.circular(15),
+                                  // border: Border.all(color: Colors.black),
+                                ),
+
                               ),
-                              child: FloatingActionButton(
-                                onPressed: () {},
-                                backgroundColor: Colors.amber,
-                                child: const Center(
-                                  child: Text(
-                                    "Login",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(179, 16, 2, 2)),
+                              Center(
+                                child: Container(
+                                  width: 100,
+                                  height: 50,
+                                   decoration: BoxDecoration(
+                                    color: const Color.fromARGB(255, 254, 133, 79),
+                                    borderRadius: BorderRadius.circular(15),
+                                    // border: Border.all(color: Colors.black),
+                                  ),
+                                  child: MaterialButton(
+                                    minWidth: 4,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      side:
+                                          const BorderSide(color: Color.fromARGB(255, 244, 243, 243)),
+                                    ),                                    onPressed: () {},
+                                    child: const Center(
+                                      child: Text(
+                                        "Login",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color.fromARGB(179, 16, 2, 2)),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
 
                         ],
