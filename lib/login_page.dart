@@ -154,9 +154,11 @@ class _LoginPageState extends State<LoginPage> {
                                   child: MaterialButton(
                                     minWidth: 4,
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(30),
                                       side:
-                                          const BorderSide(color: Color.fromARGB(255, 244, 243, 243)),
+                                          const BorderSide(color: Color.fromARGB(255, 244, 243, 243),
+                                          width: 3,
+                                          ),
                                     ),                                    onPressed: () {},
                                     child: const Center(
                                       child: Text(
