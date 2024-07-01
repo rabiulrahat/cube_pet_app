@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import 'signup_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -56,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                             // border: Border.all(color: Colors.black),
                           ),
                           // alignment: MainAxisAlignment.center,
-                          height: 450,
+                          height: 460,
                           width: 500,
                         ),
                       ),
@@ -87,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                                       color: Colors.white),
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.only(right: 200.0)),
+                              Padding(padding: EdgeInsets.only(right: 180.0)),
                               // Image(image: AssetImage('assets/font_leg.png'),
                               // width: 50,
                               // height: 20,
@@ -114,18 +116,17 @@ class _LoginPageState extends State<LoginPage> {
                               label: 'Password'),
                           const Padding(padding: EdgeInsets.all(8.0)),
 
-
                           Stack(
                             children: [
                               Container(
                                 width: 500,
                                 height: 60,
                                 decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 254, 133, 79),
+                                  color:
+                                      const Color.fromARGB(255, 254, 133, 79),
                                   borderRadius: BorderRadius.circular(15),
                                   // border: Border.all(color: Colors.black),
                                 ),
-
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -133,8 +134,9 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Container(
                                     width: 100,
                                     height: 40,
-                                     decoration: BoxDecoration(
-                                      color: const Color.fromARGB(255, 254, 133, 79),
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 254, 133, 79),
                                       borderRadius: BorderRadius.circular(15),
                                       // border: Border.all(color: Colors.black),
                                     ),
@@ -142,18 +144,21 @@ class _LoginPageState extends State<LoginPage> {
                                       minWidth: 4,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(30),
-                                        side:
-                                            const BorderSide(color: Color.fromARGB(255, 244, 243, 243),
-                                            width: 3,
-                                            ),
-                                      ),                                    onPressed: () {},
+                                        side: const BorderSide(
+                                          color: Color.fromARGB(
+                                              255, 244, 243, 243),
+                                          width: 3,
+                                        ),
+                                      ),
+                                      onPressed: () {},
                                       child: const Center(
                                         child: Text(
                                           "Login",
                                           style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold,
-                                              color: Color.fromARGB(179, 16, 2, 2)),
+                                              color: Color.fromARGB(
+                                                  179, 16, 2, 2)),
                                         ),
                                       ),
                                     ),
@@ -162,31 +167,33 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ],
                           ),
-
                         ],
                       ),
                     ],
                   ),
-                   Center(
-                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          const Text("Don't have any account? "),
-                          GestureDetector(
-                              child: const Text(
-                                'register',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 215, 111, 32)),
-                              ),
-                              onTap: () {
-                                print('tapped');
-                              })
-                        ],
-                      ),
-                                       ),
-                   ),
+                  const Padding(padding: EdgeInsets.all(8.0)),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                    child: Row(
+                      children: [
+                        const Text("Don't have any account? ",),
+                        GestureDetector(
+                            child: const Text(
+                              'register',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 215, 111, 32)),
+                            ),
+                            onTap: () {
+                              print('tapped');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignUpPage()));
+                            })
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const Padding(
