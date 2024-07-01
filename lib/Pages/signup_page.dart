@@ -1,8 +1,8 @@
-import 'package:cube_pet_app/login_page.dart';
+import 'package:cube_pet_app/Pages/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Component/pet_textfield.dart';
+import '../Component/pet_textfield.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});

@@ -1,5 +1,4 @@
-import 'package:cube_pet_app/login_page.dart';
-import 'package:cube_pet_app/test.dart';
+import 'package:cube_pet_app/Pages/slide_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TestPage(),
+      home: SlidePage(),
     );
   }
 }
