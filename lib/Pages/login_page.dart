@@ -1,4 +1,5 @@
 import 'package:cube_pet_app/Component/pet_textfield.dart';
+import 'package:cube_pet_app/Pages/all_pet_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -150,7 +151,11 @@ class _LoginPageState extends State<LoginPage> {
                                           width: 3,
                                         ),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(builder:(context)
+                                        => PetPage()
+                                        ));
+                                      },
                                       child: const Center(
                                         child: Text(
                                           "Login",
